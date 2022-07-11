@@ -87,13 +87,11 @@ public class Work extends JFrame {
 		textField.setBounds(106, 129, 298, 25);
 		contentPane.add(textField);
 		
-		JButton btnSubmit = new JButton("SUBMIT");
+		JButton btnSubmit = new JButton("ADD EXPERIENCE");
 		btnSubmit.addActionListener(new ActionListener() {
 		
 	public void actionPerformed(java.awt.event.ActionEvent evt)  {
-			Submit sub = new Submit ();	
-			sub.show();
-			dispose();		
+	
 	}
 	
 		});
@@ -103,13 +101,14 @@ public class Work extends JFrame {
 		btnSubmit.setBounds(511, 387, 245, 63);
 		contentPane.add(btnSubmit);
 		
-		JButton btnAddMoreExperience = new JButton("Add More Experience");
+		JButton btnAddMoreExperience = new JButton("GO BACK");
 		btnAddMoreExperience.addActionListener(new ActionListener() {
 
-	public void actionPerformed(ActionEvent e) {
-				
-				
-	}
+			public void actionPerformed(java.awt.event.ActionEvent evt)  {
+				Applicant app = new Applicant ();	
+				app.show();
+				dispose();		
+			}		
 		
 
 		});

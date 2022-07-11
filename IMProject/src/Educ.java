@@ -64,20 +64,26 @@ public class Educ extends JFrame {
 		yearChooser.setBounds(160, 309, 61, 25);
 		contentPane.add(yearChooser);
 		
-		JButton btnAddMoreEducation = new JButton("Add More Education");
+		JButton btnAddMoreEducation = new JButton("GO BACK");
+		btnAddMoreEducation.addActionListener(new ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt)  {
+				Applicant app = new Applicant ();	
+				app.show();
+				dispose();		
+			}		
+			
+		});
 		btnAddMoreEducation.setForeground(Color.WHITE);
 		btnAddMoreEducation.setFont(new Font("Lucida Sans Unicode", Font.PLAIN, 20));
 		btnAddMoreEducation.setBackground(new Color(1, 29, 41));
 		btnAddMoreEducation.setBounds(45, 387, 245, 63);
 		contentPane.add(btnAddMoreEducation);
 		
-		JButton btnNewButton = new JButton("PROCEED");
+		JButton btnNewButton = new JButton("ADD EDUCATION");
 		btnNewButton.addActionListener(new ActionListener() {
 		
 		public void actionPerformed(java.awt.event.ActionEvent evt)  {
-			Work works = new Work ();	
-			works.show();
-			dispose();		
+		
 		}		
 		
 		});
